@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { Typeahead } from './index';
+import { BlockButton } from './index';
 
 const value = ref<string>();
 const error = ref<string>();
@@ -25,6 +26,7 @@ async function getPredictions() {
       type="text"
       :error="error"
     ></Typeahead>
+    <BlockButton>Click Me</BlockButton>
   </div>
 </template>
 
