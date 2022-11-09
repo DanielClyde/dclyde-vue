@@ -7,7 +7,8 @@ const value = ref<string>();
 const error = ref<string>();
 
 setTimeout(() => {
-  error.value = 'This sucks';
+  error.value =
+    'This sucks and is a much longer error message. You should do something about this.';
 }, 1000);
 
 async function getPredictions() {
@@ -16,7 +17,7 @@ async function getPredictions() {
 </script>
 
 <template>
-  <div>
+  <div class="w-[500px]">
     <Typeahead
       :label="'Thing'"
       :placeholder="'Enter a thing'"

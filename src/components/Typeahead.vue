@@ -7,6 +7,7 @@
     :required="required"
     :disabled="disabled"
     :placeholder="placeholder"
+    :containingClass="containingClass"
   ></Input>
 </template>
 
@@ -21,8 +22,9 @@ export interface TypeaheadProps {
   required?: boolean;
   disabled?: boolean;
   placeholder?: string;
+  containingClass?: string;
 }
 defineProps<TypeaheadProps>();
 </script>
 
-<style scoped lang="postcss"></style>
+<style lang="postcss"></style>
