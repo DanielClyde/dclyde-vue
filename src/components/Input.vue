@@ -55,7 +55,13 @@ export default {
   @apply block text-left text-gray-500 mb-1;
 }
 .dclyde-input {
-  @apply form-input rounded border-gray-100 bg-white shadow-inner focus:ring-blue-500/50 focus:border-blue-500/50 w-full;
+  @apply form-input mt-1 block w-full bg-white border border-slate-100 rounded-md text-sm shadow-inner placeholder-slate-400
+      focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+      disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
+      invalid:border-red-500/50 invalid:text-red-500/50
+      focus:invalid:border-red-500/50 focus:invalid:ring-red-500/50
+      invalid:placeholder-shown:border-slate-100
+      valid:border-sky-500;
 }
 .dclyde-input-error {
   @apply text-red-500/50 text-sm text-left mt-1 w-full max-h-full absolute top-full;

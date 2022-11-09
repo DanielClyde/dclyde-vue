@@ -27,7 +27,7 @@ async function getPredictions() {
       type="text"
       :error="error"
     ></Typeahead>
-    <BlockButton>Click Me</BlockButton>
+    <BlockButton :disabled="true">Click Me</BlockButton>
   </div>
 </template>
 
