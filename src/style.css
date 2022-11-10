@@ -2,9 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+.slide-down-enter-from,
+.slide-down-leave-to {
+  transform: translateY(-10px);
+  opacity: 0;
+}
 
-#app {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.slide-down-enter-to,
+.slide-down-leave-from {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.slide-down-enter-active,
+.slide-down-leave-active {
+  transition: all 0.2s ease-out;
 }
