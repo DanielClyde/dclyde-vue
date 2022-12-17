@@ -14,6 +14,6 @@ export default {
 
 <style lang="postcss">
 .dclyde-clear-button {
-  @apply appearance-none bg-transparent text-blue-500/50 text-sm;
+  @apply appearance-none bg-transparent text-primary text-sm;
 }
 </style>
