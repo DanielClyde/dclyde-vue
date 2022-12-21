@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, watch } from 'vue';
 import Input from './Input.vue';
 
 export interface TypeaheadOption {
@@ -20,7 +20,18 @@ const predictions = ref<TypeaheadOption[]>([]);
 const showPredictions = ref(false);
 const arrowIndex = ref(-1);
 
+
 let timeout: number | null = null;
+watch(() => props.modelValue, (val, old) => {
+  if (old && !val) {
+    if (timeout) {
+      clearTimeout(timeout);
+    }
+    search.value = '';
+    showPredictions.value = false;
+    predictions.value = [];
+  }
+});
 function onInput(input: string) {
   search.value = input;
   if (timeout) {
