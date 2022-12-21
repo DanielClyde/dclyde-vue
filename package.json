@@ -1,7 +1,6 @@
 {
   "name": "dclyde-vue",
   "version": "1.0.0",
-  "private": true,
   "files": [
     "dist"
   ],
