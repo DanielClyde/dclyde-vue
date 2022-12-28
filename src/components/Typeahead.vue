@@ -11,10 +11,12 @@ const props = defineProps<{
   disabled?: boolean;
   modelValue: string;
   autofocus?: boolean;
+  placeholder?: string;
 }>();
 const search = ref('');
 const emit = defineEmits<{
   (e: 'update:modelValue', val: string): void;
+  (e: 'update:text', val: string): void;
 }>();
 const predictions = ref<TypeaheadOption[]>([]);
 const showPredictions = ref(false);
@@ -34,6 +36,8 @@ watch(() => props.modelValue, (val, old) => {
 });
 function onInput(input: string) {
   search.value = input;
+  emit('update:text', search.value);
+  emit('update:modelValue', '');
   if (timeout) {
     clearTimeout(timeout);
   }
@@ -93,8 +97,8 @@ export default {
 </script>
 
 <template>
-  <div class="relative">
-    <Input :autofocus="props.autofocus" @keydown.down.stop="onDown()" @keydown.up.stop="onUp()" @keydown.enter.stop="onEnter" v-bind="$attrs" @update:model-value="onInput" v-model="search"></Input>
+  <div class="relative w-full">
+    <Input :placeholder="props.placeholder" :autofocus="props.autofocus" @keydown.down.stop="onDown()" @keydown.up.stop="onUp()" @keydown.enter.stop="onEnter" v-bind="$attrs" @update:model-value="onInput" v-model="search"></Input>
     <div
       @click.outside="showPredictions = false"
       v-if="showPredictions"
