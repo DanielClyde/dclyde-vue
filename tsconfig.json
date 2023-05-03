@@ -17,6 +17,6 @@
     "outDir": "dist",
     "declaration": true
   },
-  "include": ["vite.config.*", "env.d.ts", "src/**/*", "src/**/*.vue"],
+  "include": ["vite.config.*", "env.d.ts", "src/**/*", "src/**/*.vue", "test/**/*"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

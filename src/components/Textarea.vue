@@ -55,10 +55,10 @@ export default {
   @apply block text-left text-gray-500 mb-1;
 }
 .dclyde-textarea {
-  @apply form-textarea mt-1 block w-full bg-white border border-slate-100 rounded-md text-sm shadow-inner placeholder-slate-400 focus:outline-none focus:border-valid focus:ring-1 focus:ring-valid disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:border-err invalid:text-err focus:invalid:border-err focus:invalid:ring-err invalid:placeholder-shown:border-slate-100 valid:border-valid;
+  @apply form-textarea mt-1 block w-full bg-white border border-slate-100 rounded-md text-sm shadow-inner placeholder-slate-400 focus:outline-none focus:border-light-blue-800 focus:ring-1 focus:ring-light-blue-800 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:border-red-300 invalid:text-red-300 focus:invalid:border-red-300 focus:invalid:ring-red-300 invalid:placeholder-shown:border-slate-100 valid:border-light-blue-800;
 }
 .dclyde-textarea-error {
-  @apply text-err text-sm text-left mt-1 w-full max-h-full absolute top-full;
+  @apply text-red-300 text-sm text-left mt-1 w-full max-h-full absolute top-full;
 }
 </style>
 

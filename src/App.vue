@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, ref, watchEffect } from 'vue';
-import { Input, Select, Textarea } from './index';
+import { Input, Select, Textarea, BlockButton, ClearButton } from './index';
 
 const inputValue = ref('');
 const options = [
@@ -18,10 +18,13 @@ watchEffect(() => {
 </script>
 
 <template>
-  <div class="w-[500px]">
+  <div class="w-[500px] p-6">
     <Input v-model="inputValue" :placeholder="'Enter a value...'"></Input>
     <Select v-model="selectedValue" :options="options" :error="error ? 'no, bad...' : undefined"></Select>
     <Textarea v-model="inputValue" :placeholder="'Enter a value...'"></Textarea>
+    <BlockButton>Submit</BlockButton>
+    <div class="mb-4"></div>
+    <ClearButton>Questions?</ClearButton>
   </div>
 </template>
 

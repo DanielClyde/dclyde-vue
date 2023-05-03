@@ -106,10 +106,10 @@ export default {
     >
       <div
         @click="predictionSelected(p)"
-        class="p-2 text-gray-700 hover:bg-sky-100 cursor-pointer"
+        class="p-2 text-gray-700 hover:bg-light-blue-200 cursor-pointer"
         v-for="(p, i) in predictions"
         :key="i"
-        :class="arrowIndex === i ? 'bg-sky-100' : ''"
+        :class="arrowIndex === i ? 'bg-light-blue-200' : ''"
       >
         {{ p.label }}
       </div>

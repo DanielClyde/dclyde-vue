@@ -14,6 +14,12 @@ export default {
 
 <style lang="postcss">
 .dclyde-clear-button {
-  @apply appearance-none bg-transparent text-primary text-sm;
+  @apply appearance-none bg-transparent text-light-blue-500 text-sm transition-colors duration-100;
+}
+.dclyde-clear-button:hover {
+  @apply text-light-blue-600;
+}
+.dclyde-clear-button:active {
+  @apply text-light-blue-500
 }
 </style>
