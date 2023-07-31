@@ -50,7 +50,7 @@ export default {
 };
 </script>
 
-<style lang="postcss">
+<style>
 .dclyde-textarea-label {
   @apply block text-left text-gray-500 mb-1;
 }
@@ -61,5 +61,3 @@ export default {
   @apply text-red-300 text-sm text-left mt-1 w-full max-h-full absolute top-full;
 }
 </style>
-
-<style scoped></style>

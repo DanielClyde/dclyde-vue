@@ -12,7 +12,7 @@ export default {
 }
 </script>
 
-<style lang="postcss">
+<style>
 .dclyde-clear-button {
   @apply appearance-none bg-transparent text-light-blue-500 text-sm transition-colors duration-100;
 }

@@ -56,7 +56,7 @@ export default {
   </div>
 </template>
 
-<style lang="postcss">
+<style>
 .dclyde-select {
   @apply form-select block w-full bg-white border-slate-100 rounded-md text-sm shadow-inner placeholder-slate-400 focus:outline-none focus:border-light-blue-800 focus:ring-1 focus:ring-light-blue-800 hover:cursor-pointer disabled:bg-slate-50 disabled:hover:cursor-auto disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:border-red-300 invalid:text-red-300 focus:invalid:border-red-300 focus:invalid:ring-red-300 invalid:placeholder-shown:border-slate-100 valid:border-light-blue-800 valid:text-light-blue-800;
 }
